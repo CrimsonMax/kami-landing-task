@@ -1,3 +1,5 @@
+const fileinclude = require('gulp-file-include');
+
 let projectFolder = 'build';
 let sourceFolder = 'src';
 
@@ -9,13 +11,13 @@ let path = {
         img: projectFolder + '/img/',
     },
     src: {
-        html: [sourceFolder + '/pug/*.pug'],
+        html: [sourceFolder + '/html/*.html'],
         css: sourceFolder + '/scss/style.scss',
         js: sourceFolder + '/js/script.js',
         img: sourceFolder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
     },
     watch: {
-        html: sourceFolder + '/pug/**/*.pug',
+        html: sourceFolder + '/html/**/*.html',
         css: sourceFolder + '/scss/**/*.scss',
         js: sourceFolder + '/js/**/*.js',
         img: sourceFolder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
@@ -50,7 +52,7 @@ function browserSync() {
 
 function html() {
     return src(path.src.html)
-        .pipe(pug({pretty: true}))
+        .pipe(fileinclude())
         .pipe(dest(path.build.html))
         .pipe(browsersync.stream())
 }
