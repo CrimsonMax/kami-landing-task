@@ -1,0 +1,13 @@
+.mForm {
+  &__btn-green {
+    height: 48px;
+  }
+  
+  &__title {
+    text-align: left;
+  
+    @include big-tablet-down {
+      text-align: center;
+    }
+  }
+}

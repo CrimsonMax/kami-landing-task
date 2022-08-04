@@ -1,0 +1,107 @@
+@-webkit-keyframes animCubes {
+  0% {
+    -webkit-transform: scale(3);
+    transform: scale(3);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes animCubes {
+  0% {
+    -webkit-transform: scale(3);
+    transform: scale(3);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.cubes {
+  position: relative;
+  z-index: 9;
+
+  @include widescreen-width {
+    display: none;
+  }
+}
+
+.cubes.animation-is-on {
+  -webkit-animation: animCubes 0.8s both;
+  animation: animCubes 0.8s both;
+}
+
+.cube {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &--green-l {
+    background-image: url(https://go.veeam.com/rs/870-LBG-312/images/cube_veeam_cloud_club_left_green.png);
+    height: 79.65853881835938px;
+    width: 92px;
+    left: -200px;
+    top: 590px;
+  }
+  
+  &--darkgreen-l {
+    background-image: url(https://go.veeam.com/rs/870-LBG-312/images/cube_veeam_cloud_club_left_darkgreen.png);
+    height: 76px;
+    width: 86px;
+    left: -300px;
+    top: 1560px;
+  }
+  
+  &--lightblue-l {
+    background-image: url(https://go.veeam.com/rs/870-LBG-312/images/cube_veeam_cloud_club_left_lightblue.png);
+    height: 127px;
+    width: 145px;
+    left: -250px;
+    top: 1440px;
+  }
+  
+  &--blue-l {
+    background-image: url(https://go.veeam.com/rs/870-LBG-312/images/cube_veeam_cloud_club_blue.png);
+    height: 108px;
+    width: 124.11940002441406px;
+    left: -200px;
+    top: 1780px;
+  }
+  
+  &--darkgreen-r {
+    background-image: url(https://go.veeam.com/rs/870-LBG-312/images/cube_veeam_cloud_club_right_darkgreen.png);
+    height: 135.49066162109375px;
+    width: 151.05767822265625px;
+    top: -20px;
+    right: -300px;
+  }
+  
+  &--green-r {
+    background-image: url(https://go.veeam.com/rs/870-LBG-312/images/cube_veeam_cloud_club_right_green_1.png);
+    height: 64.98065948486328px;
+    width: 73.53075408935547px;
+    top: 150px;
+    right: -185px;
+  }
+  
+  &--xgreen-r {
+    background-image: url(https://go.veeam.com/rs/870-LBG-312/images/cube_veeam_cloud_club_right_green_2.png);
+    height: 162.78048706054688px;
+    width: 188px;
+    top: 1800px;
+    right: -200px;
+  }
+}
+
+@media screen and (max-width: 1820px) {
+  .cube--darkgreen-r,
+  .cube--darkgreen-l,
+  .cube--lightblue-l {
+    display: none;
+  }
+}

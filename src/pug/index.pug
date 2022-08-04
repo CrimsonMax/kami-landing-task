@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+    head
+        include includes/head-basic
+    body
+        //- include includes/progressive-profiling
+        link(rel='stylesheet' href='https://psr.veeam.com/global/css/hybrid_form.css')
+        link(rel='stylesheet' href='css/style.min.css')
+
+        .wrap_content
+            // Add your code here
+            include layout/header
+            include layout/main
+            include blocks/speakers
+            include blocks/agenda
+            include blocks/venue
+
+        include layout/footer
+        include includes/scripts-for-form
+
+        //- script(src='https://psr.veeam.com/local/events/js/events_general.js')
+        //- script(src='https://psr.veeam.com/local/events/js/link-form-vbr-1.js')
+
+
+        script(src='js/script.min.js')
+        //- include includes/shareholic

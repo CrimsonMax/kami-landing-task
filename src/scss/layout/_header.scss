@@ -1,0 +1,146 @@
+.logo-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  &__item {
+    line-height: 0;
+
+    &:not(:last-child) {
+      @include big-tablet-down {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  @include big-tablet-down {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+.header {
+  background-color: $color-grey-f1;
+  background-image: url(https://go.veeam.com/rs/870-LBG-312/images/cube_veeam_cloud_club_double_square.png);
+  padding: 48px 0 52px;
+  display: block;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 461px;
+  color: #fff;
+  background-position: calc(50% + 410px) 100%;
+
+  &::after {
+    @include pseudo;
+    @include pattern($color-blue-light);
+    width: 100px;
+    height: 340px;
+    right: 0;
+    bottom: -240px;
+
+    @include widescreen-width {
+      right: 130px;
+      bottom: -175px;
+      transform: rotate(90deg);
+    }
+  }
+
+  &::before {
+    @include pseudo;
+    @include pattern($color-blue-light);
+    width: 70px;
+    height: 255px;
+    top: 8px;
+    left: 4px;
+
+    @include widescreen-width {
+      top: -135px;
+      left: 100px;
+      transform: rotate(90deg);
+    }
+  }
+  
+  &__logos:not(:last-child) {
+    margin-bottom: 64px;
+  }
+  
+  @include widescreen-width {
+    background-position: 90% center;
+  }
+
+  @include big-tablet-down {
+    background-image: none;
+    padding: 60px 0;
+  }
+
+  @include tablet-down {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  @include mob-down {
+    text-align: center;
+  }
+}
+
+.header__title {
+  color: $color-blue-light;
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 68px;
+}
+
+.header__title:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.header__text {
+  display: grid;
+}
+
+.calendar {
+  color: $color-blue-light;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  position: relative;
+
+  &::before {
+    filter: brightness(0) saturate(100%) invert(24%) sepia(66%) saturate(1463%) hue-rotate(184deg) brightness(86%)
+      contrast(97%);
+    width: 32px;
+    height: 32px;
+    content: "";
+    position: relative;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 8px;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 5H6V8H8V5Z' fill='white'/%3E%3Cpath d='M17 5H15V8H17V5Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M19 7H4.1L4 16C4 17.1 4.9 18 6 18H17C18.1 18 19 17.1 19 16V7ZM7.49999 11.6C8.10751 11.6 8.59999 11.1075 8.59999 10.5C8.59999 9.89248 8.10751 9.39999 7.49999 9.39999C6.89248 9.39999 6.39999 9.89248 6.39999 10.5C6.39999 11.1075 6.89248 11.6 7.49999 11.6ZM11.5 11.6C12.1075 11.6 12.6 11.1075 12.6 10.5C12.6 9.89248 12.1075 9.39999 11.5 9.39999C10.8925 9.39999 10.4 9.89248 10.4 10.5C10.4 11.1075 10.8925 11.6 11.5 11.6ZM16.6 10.5C16.6 11.1075 16.1075 11.6 15.5 11.6C14.8925 11.6 14.4 11.1075 14.4 10.5C14.4 9.89248 14.8925 9.39999 15.5 9.39999C16.1075 9.39999 16.6 9.89248 16.6 10.5ZM7.49999 15.6C8.10751 15.6 8.59999 15.1075 8.59999 14.5C8.59999 13.8925 8.10751 13.4 7.49999 13.4C6.89248 13.4 6.39999 13.8925 6.39999 14.5C6.39999 15.1075 6.89248 15.6 7.49999 15.6ZM12.6 14.5C12.6 15.1075 12.1075 15.6 11.5 15.6C10.8925 15.6 10.4 15.1075 10.4 14.5C10.4 13.8925 10.8925 13.4 11.5 13.4C12.1075 13.4 12.6 13.8925 12.6 14.5ZM15.5 15.6C16.1075 15.6 16.6 15.1075 16.6 14.5C16.6 13.8925 16.1075 13.4 15.5 13.4C14.8925 13.4 14.4 13.8925 14.4 14.5C14.4 15.1075 14.8925 15.6 15.5 15.6Z' fill='white'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+  }
+}
+
+.g-cta {
+  text-align: initial;
+  margin-top: 48px;
+
+  @include big-tablet-down {
+    text-align: center;
+  }
+}
