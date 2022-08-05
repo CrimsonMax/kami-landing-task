@@ -1,3 +1,4 @@
+@import 'normalize.scss';
 @import 'helpers.scss';
 @import 'mixins.scss';
 @import 'typography.scss';
@@ -6,20 +7,18 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-size: 16px;
+  background-color: green;
 }
-
-// p {
-//   &:not(:last-child) {
-//     margin-bottom: 16px;
-//   }
-// }
 
 img {
   max-width: 100%;
+  object-fit: cover;
 }
 
 .wrapper {
@@ -28,89 +27,4 @@ img {
   @include margin-auto;
 }
 
-.division {
-  padding: 90px 0;
-
-  @include tablet-down {
-    padding: 70px 0;
-  }
-
-  @include mob-down {
-    padding: 50px 0;
-  }
-
-  &--bgr_grey {
-    background: $color-grey-f1;
-  }
-
-  &--bgr_dark {
-    background: $color-teal;
-    color: $color-white;
-  }
-
-  &__bordered-block {
-    padding-bottom: 64px;
-    margin-bottom: 64px;
-    border-bottom: 1px solid $color-grey;
-
-    @include mob-down {
-      padding-bottom: 40px;
-      margin-bottom: 40px;
-    }
-  }
-}
-
-.push {
-  @each $name, $size in $push-sizes {
-    &-size-#{$name}:not(:last-child) {
-      @each $screen, $value in $size {
-        @if $screen == 'desktop' {
-          margin-bottom: $value;
-        }
-
-        @include tablet-down {
-          @if $screen == 'tablet' {
-            margin-bottom: $value;
-          }
-        }
-
-        @include mob-down {
-          @if $screen == 'mobile' {
-            margin-bottom: $value;
-          }
-        }
-      }
-    }
-  }
-}
-
-.section-title {
-  margin-bottom: 48px;
-
-  @include big-tablet-down {
-    text-align: center;
-  }
-
-  @include mob-down {
-    margin-bottom: 32px;
-  }
-}
-
-.g-list__item:not(:last-child) {
-  margin-bottom: 10px;
-}
-
-.title-size-m {
-  font-weight: 500;
-}
-
 // Add your code here
-
-@import 'blocks/cubes.scss';
-@import 'blocks/form.scss';
-@import 'layout/header.scss';
-@import 'layout/main.scss';
-@import 'blocks/speakers.scss';
-@import 'blocks/agenda.scss';
-@import 'blocks/venue.scss';
-@import 'layout/footer.scss';

@@ -4,39 +4,34 @@
   }
 }
 
-@mixin extra-big-tablet-down {
+@mixin extra-big-tablet-width {
   @media screen and (max-width: #{$extra-big-tablet-width}) {
     @content;
   }
 }
 
-@mixin big-tablet-down {
+@mixin big-tablet-width {
   @media screen and (max-width: #{$big-tablet-width}) {
     @content;
   }
 }
 
-@mixin tablet-down {
+@mixin tablet-width {
   @media screen and (max-width: #{$tablet-width}) {
     @content;
   }
 }
 
-@mixin mob-down {
+@mixin mob-width {
   @media screen and (max-width: #{$mob-width}) {
     @content;
   }
 }
 
-@mixin mob-mini-down {
+@mixin mob-mini-width {
   @media screen and (max-width: #{$mob-mini-width}) {
     @content;
   }
-}
-
-@mixin pseudo {
-  content: '';
-  position: absolute;
 }
 
 
@@ -49,27 +44,6 @@
 @mixin set-font-size($size) {
   font-size: $size;
   line-height: $size + 8;
-}
-
-@mixin background($clr:$color-white, $pic:none, $position:0 0, $size:cover) {
-  @if $pic == none {
-    background: $clr;
-  } @else {
-    background: $clr $pic no-repeat $position / $size;
-  }
-
-  @if index($dark-backgrounds, $clr) {
-    color: $color-white;
-
-    a {
-      color: $color-peridot;
-    }
-  }
-}
-
-@mixin pattern($color: $color-peridot) {
-  background: radial-gradient(circle, $color 3.5px, transparent 3.5px) -8px -9px repeat;
-  background-size: 27px 27px;
 }
 
 

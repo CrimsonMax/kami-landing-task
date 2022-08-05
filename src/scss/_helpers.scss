@@ -8,85 +8,48 @@ $mob-width: 480px;
 $mob-mini-width: 370px;
 
 /* Colors */
-
+$color-yellow-main: #ffda00;
+$color-yellow-hover: #ffe54a;
+$color-yellow-action: #ffc700;
+$color-red-demand: #e4002b;
 $color-white: #ffffff;
 $color-black: #000000;
-$color-base: #232323;
-$color-topaz: #00b336;
-$color-sapphire: #005f4b;
-$color-teal: #004550;
-$color-peridot: #93ea20;
-$color-emerald: #00b492;
-$color-green-additional: #7ede00;
-$color-green-additional-2: #dbffab;
-$color-green-toxic: #00ff29;
-$color-grey: #cdcdcd;
-$color-grey-f1: #f1f1f1;
-$color-grey-99: #999999;
-$color-red: #ba0200;
-$color-dark-blue: #0d1d2a;
-$color-blue: #005774;
-$color-blue-light: #0b4d87;
-$color-blue-sky: #01b0f1;
-$color-green-sky: #E6FDE0;
-
-$dark-backgrounds: $color-sapphire, $color-teal, $color-black, $color-topaz, $color-dark-blue, $color-blue, $color-blue-light;
+$color-black-main: #100f0f;
+$color-grey-main: #808080;
+$color-grey-secondary: #e5e5e5;
+$color-grey-hover: #eeeeee;
+$color-grey-action: #dbdbdb;
+$color-grey-third: #a1a1a1;
 
 $title-sizes: (
         xxs: (
                 desktop: 20px,
                 tablet: 18px,
-                mobile: 16px),
+                mobile: 16px,
+        ),
         xs: (
                 desktop: 24px,
                 tablet: 20px,
-                mobile: 18px),
+                mobile: 18px,
+        ),
         s: (
                 desktop: 28px,
                 tablet: 24px,
-                mobile: 22px),
+                mobile: 22px,
+        ),
         m: (
                 desktop: 40px,
                 tablet: 32px,
-                mobile: 28px),
+                mobile: 28px,
+        ),
         l: (
                 desktop: 52px,
                 tablet: 48px,
-                mobile: 32px),
+                mobile: 32px,
+        ),
         xl: (
                 desktop: 64px,
                 tablet: 52px,
-                mobile: 48px),
-);
-
-$push-sizes: (
-        xxs: (
-                desktop: 16px),
-        xs: (
-                desktop: 24px,
-                mob: 16px),
-        s: (
-                desktop: 32px,
-                tablet: 24px,
-                mobile: 16px),
-        m: (
-                desktop: 40px,
-                tablet: 32px,
-                mobile: 24px),
-        l: (
-                desktop: 48px,
-                tablet: 40px,
-                mobile: 32px),
-        xl: (
-                desktop: 56px,
-                tablet: 48px,
-                mobile: 40px),
-        xxl: (
-                desktop: 72px,
-                tablet: 56px,
-                mobile: 40px),
-        xxxl: (
-                desktop: 90px,
-                tablet: 56px,
-                mobile: 40px),
+                mobile: 48px,
+        ),
 );

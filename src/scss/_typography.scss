@@ -6,13 +6,13 @@
           @include set-font-size($value);
         }
 
-        @include tablet-down {
+        @include tablet-width {
           @if $screen == 'tablet' {
             @include set-font-size($value);
           }
         }
 
-        @include mob-down {
+        @include mob-width {
           @if $screen == 'mobile' {
             @include set-font-size($value);
           }
@@ -21,29 +21,3 @@
     }
   }
 }
-
-.highlight {
-  color: $color-peridot;
-}
-
-.highlight-dark {
-  color: $color-topaz;
-}
-
-.highlight-upper {
-  text-transform: uppercase;
-}
-
-.flag {
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.nowrap {
-  white-space: nowrap;
-}
-
