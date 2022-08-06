@@ -14,6 +14,7 @@
 body {
   font-size: 16px;
   font-family: Roboto, sans-serif;
+  background-color: $color-white-secondary;
 }
 
 img {
@@ -21,10 +22,21 @@ img {
   object-fit: cover;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
 .wrapper {
-  max-width: 1270px;
-  padding: 0 15px;
+  max-width: 1172px;
+  padding: 0 16px;
   @include margin-auto;
 }
 
 // Add your code here
+
+@import "./layout/header.scss";
