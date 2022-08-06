@@ -425,7 +425,7 @@ template {
 
 body {
   font-size: 16px;
-  background-color: green;
+  font-family: Roboto, sans-serif;
 }
 
 img {
