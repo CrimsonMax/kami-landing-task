@@ -1,0 +1,113 @@
+.slider {
+  margin-bottom: 0;
+}
+
+.slider__container {
+  width: 100%;
+  height: 750px;
+}
+
+.max-slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.max-slider__arrow-right, .max-slider__arrow-left {
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.max-slider__arrow-right {
+  right: -1rem;
+}
+
+.max-slider__arrow-right:active, .max-slider__arrow-left:active {
+  background-color: red;
+}
+
+.max-slider__images-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.max-slider__images-container:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.max-slider__images-container--transition {
+  -webkit-transition: all 0.25s ease 0s;
+  transition: all 0.25s ease 0s;
+}
+
+.max-slider__image {
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.max-slider__dots-container {
+  width: 100%;
+  margin-bottom: 60px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 1rem;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  bottom: 0;
+}
+
+.max-slider__dot {
+  height: 7px;
+  width: 49px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+}
+
+@media (hover: hover) {
+  .max-slider__dot:hover {
+    cursor: pointer;
+    background-color: greenyellow;
+  }
+}
+
+.max-slider__dot--active {
+  background-color: green;
+}
+/*# sourceMappingURL=slider.css.map */

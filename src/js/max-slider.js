@@ -1,5 +1,3 @@
-// Slider //
-
 // Setup prime elements
 const mainContainer = document.querySelector('.max-slider')
 let sliderContainer = document.querySelector('.max-slider__images-container')
@@ -70,7 +68,7 @@ function kamino() {
   secondSlideClone.classList.add('clone')
   lastSlideClone.classList.add('clone')
   preLastSlideClone.classList.add('clone')
-
+  
   sliderContainer.appendChild(secondSlideClone)
   sliderContainer.insertBefore(firstSlideClone, secondSlideClone)
   sliderContainer.insertBefore(lastSlideClone, firstSlide)
@@ -92,16 +90,16 @@ function addActive() {
   dotsContainer.querySelectorAll('.max-slider__dot').forEach(elem => {
     if (document.querySelectorAll('.max-slider__image--active').length === 3) { // check if there only 2 slides
       elem.dataset.dot === document.querySelectorAll('.max-slider__image--active')[1].dataset.item
-        ?
-        elem.classList.add('max-slider__dot--active')
-        :
-        elem.classList.remove('max-slider__dot--active')
+      ?
+      elem.classList.add('max-slider__dot--active')
+      :
+      elem.classList.remove('max-slider__dot--active')
     } else {
       elem.dataset.dot === document.querySelector('.max-slider__image--active').dataset.item
-        ?
-        elem.classList.add('max-slider__dot--active')
-        :
-        elem.classList.remove('max-slider__dot--active')
+      ?
+      elem.classList.add('max-slider__dot--active')
+      :
+      elem.classList.remove('max-slider__dot--active')
     }
   })
 }
@@ -189,10 +187,10 @@ let finalSliderPosition;
 let position = 0
 
 // Drag events
-sliderContainer.addEventListener("mousedown", dragStart, {passive: false});
-sliderContainer.addEventListener("touchstart", dragStart, {passive: false});
-sliderContainer.addEventListener("touchmove", dragMove, {passive: false});
-sliderContainer.addEventListener("touchend", dragEnd, {passive: false});
+sliderContainer.addEventListener("mousedown", dragStart);
+sliderContainer.addEventListener("touchstart", dragStart);
+sliderContainer.addEventListener("touchmove", dragMove);
+sliderContainer.addEventListener("touchend", dragEnd);
 
 // Drag actions
 function dragStart(e) {
@@ -214,7 +212,6 @@ function dragStart(e) {
   }
 }
 function dragMove(e) {
-  
   if (e.type === 'touchmove') {
     nextXposition = startXposition - e.touches[0].clientX
     startXposition = e.touches[0].clientX
