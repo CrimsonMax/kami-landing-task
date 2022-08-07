@@ -5,7 +5,7 @@
     width: 100%;
     height: 750px;
 
-    @include big-tablet-width {
+    @include extra-big-tablet-width {
       height: 665px;
     }
 
