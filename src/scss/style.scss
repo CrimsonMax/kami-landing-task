@@ -37,6 +37,11 @@ li {
   @include margin-auto;
 }
 
+.section {
+  margin-bottom: 106px;
+}
+
 // Add your code here
 
 @import "./layout/header.scss";
+@import "./blocks/production.scss";

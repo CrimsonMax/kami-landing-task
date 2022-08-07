@@ -81,7 +81,7 @@
   }
 
   &__link {
-    transition: all 0.3s ease-out;
+    @include transition;
 
     &:hover {
       color: $color-black-main;
@@ -109,7 +109,7 @@
     border-radius: 5px;
     background-color: $color-grey-secondary;
     counter-reset: $color-black-main;
-    transition: all 0.3s ease-out;
+    @include transition;
 
     &:hover {
       background-color: $color-grey-hover;
@@ -145,7 +145,7 @@
     justify-content: center;
     align-items: center;
     gap: 11px;
-    transition: all 0.3s ease-out;
+    @include transition;
 
     &:hover {
       filter: brightness(1.1);

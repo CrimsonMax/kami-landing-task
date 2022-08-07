@@ -40,6 +40,10 @@
   margin-right: auto;
 }
 
+@mixin transition {
+  transition: all 0.3s ease-out;
+}
+
 
 @mixin set-font-size($size) {
   font-size: $size;

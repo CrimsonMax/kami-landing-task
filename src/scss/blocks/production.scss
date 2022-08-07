@@ -1,0 +1,160 @@
+.production {
+  &__container {
+  }
+
+  &__title {
+    margin: 42px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 14px;
+
+    @include mob-width {
+      margin: 22px 0;
+    }
+  }
+
+  &__marker {
+    height: 34px;
+    width: 34px;
+
+    @include big-tablet-width {
+      height: 31px;
+      width: 31px;
+    }
+  }
+
+  &__header {
+    font-size: 36px;
+    font-weight: 700;
+    color: $color-black;
+
+    @include big-tablet-width {
+      font-size: 25px;
+    }
+  }
+
+  &__links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 30px;
+
+    @include extra-big-tablet-width {
+      grid-gap: 20px;
+    }
+
+    @include big-tablet-width {
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+    }
+  }
+
+  &__block {
+    height: 174px;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 5px;
+    overflow: hidden;
+    @include transition;
+
+    &--prime {
+      height: 100%;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      flex-direction: column;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        box-shadow: 0 0.375rem 1.5rem 0 $color-black-main;
+      }
+    }
+
+    @include extra-big-tablet-width {
+      height: 144px;
+
+      &--prime {
+        height: 100%;
+      }
+    }
+
+    @include big-tablet-width {
+      height: 144px;
+
+      &--prime {
+        height: 100%;
+      }
+    }
+
+    @include mob-width {
+      height: 100px;
+
+      &--prime {
+        height: 100%;
+      }
+    }
+  }
+
+  &__img {
+    &--prime {
+      height: 290px;
+    }
+
+    @include extra-big-tablet-width {
+      &--prime {
+        height: 240px;
+      }
+    }
+
+    @include mob-width {
+      &--prime {
+        height: 200px;
+      }
+    }
+  }
+
+  &__bgr {
+    height: 100%;
+    width: 100%;
+    background-color: $color-black;
+    display: flex;
+    align-items: center;
+    padding-left: 34px;
+
+    @include extra-big-tablet-width {
+      padding-left: 24px;
+    }
+
+    @include big-tablet-width {
+      padding-left: 20px;
+      
+      &--prime {
+        height: 68px;
+      }
+    }
+
+    @include mob-width {
+      padding-left: 14px;
+    }
+  }
+
+  &__name {
+    font-size: 26px;
+    font-weight: 700;
+    color: $color-white;
+
+    @include extra-big-tablet-width {
+      font-size: 22px;
+    }
+
+    @include mob-width {
+      font-size: 18px;
+    }
+  }
+
+  &__mark {
+    color: $color-yellow-mark;
+  }
+}
