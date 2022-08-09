@@ -1,2 +1,1 @@
-# kami-landing-task
- test task
+Для запуска используется стандартный скрипт: Gulp
