@@ -54,7 +54,6 @@
     max-width: 868px;
     font-size: 28px;
     line-height: 38px;
-    // margin-bottom: 152px;
 
     @include big-tablet-width {
       margin-bottom: 0;
@@ -130,9 +129,6 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-  }
-
-  &__image--active {
   }
 
   &__dots-container {

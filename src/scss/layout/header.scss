@@ -16,18 +16,6 @@
     align-items: center;
   }
 
-  &__logo {
-  }
-
-  &__nav {
-  }
-
-  &__contacts {
-  }
-
-  &__mobile-menu {
-  }
-
   @include big-tablet-width {
     position: fixed;
   }
@@ -42,9 +30,6 @@
 }
 
 .main-logo {
-  &__link {
-  }
-
   &__icon {
     height: 49px;
 
@@ -104,9 +89,6 @@
     color: $color-black-main;
   }
 
-  &__projects {
-  }
-
   &__btn-production {
     border: none;
     background: none;
@@ -157,9 +139,6 @@
     }
   }
 
-  &__productions-list {
-  }
-
   @include extra-big-tablet-width {
     width: max(500px);
   }
@@ -198,12 +177,6 @@
   &__icon {
     height: 31px;
     width: 31px;
-  }
-
-  &__mail {
-  }
-
-  &__phone {
   }
 
   @include big-tablet-width {

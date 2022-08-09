@@ -13,12 +13,7 @@ let containerWidth
 
 let dragSensitivity = .2
 let timer = 3000
-// autoPlay(leftMove)
-
-// Removing certain elements from the interface
-// dotsContainer.style.display = 'none'
-// leftButton.style.display = 'none'
-// rightButton.style.display = 'none'
+autoPlay(leftMove)
 
 // Generate dots
 myImages.forEach(elem => {
@@ -286,7 +281,12 @@ modalBtnDesk.addEventListener('click', modalOn)
 modalBtnMobile.addEventListener('click', modalOn)
 modalClose.addEventListener('click', modalOff)
 
-// DROPDOWN // ================================================================================
+// BURGER // ================================================================================
+
+const burgerBtn = document.querySelector('.burger-btn')
+const burgerMenu = document.querySelector('.burger-menu')
+
+burgerBtn.addEventListener('click', () => burgerMenu.classList.toggle('burger-active'))
 
 const listDropBtn = document.querySelector('.burger-menu__btn-productions')
 const listBlock = document.querySelector('.burger-menu__production-list')
@@ -297,12 +297,3 @@ const burgerDrop = () => {
 }
 
 listDropBtn.addEventListener('click', burgerDrop)
-// listDropBtn.addEventListener('mouseout', () => listBlock.classList.remove('production-active'))
-// listBlock.addEventListener('mouseleave', () => listBlock.classList.remove('active'))
-
-// BURGER // ================================================================================
-
-const burgerBtn = document.querySelector('.burger-btn')
-const burgerMenu = document.querySelector('.burger-menu')
-
-burgerBtn.addEventListener('click', () => burgerMenu.classList.toggle('burger-active'))
