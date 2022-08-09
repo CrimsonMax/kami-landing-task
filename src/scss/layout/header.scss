@@ -65,6 +65,7 @@
     }
   }
 }
+
 .nav {
   height: 100%;
   width: max(550px);
@@ -111,13 +112,18 @@
     background: none;
     position: relative;
     cursor: pointer;
+    font-weight: 500;
 
     &::after {
       content: url(../../img/svg/menu_arrow.svg);
       margin-left: 7px;
       position: absolute;
       transform: translateY(-5%);
-      @include transition;
+    }
+
+    &.active::after {
+      top: 20%;
+      transform: rotate3d(1, 0, 0, 180deg);
     }
   }
 
@@ -128,6 +134,7 @@
     border-radius: 5px;
     background-color: $color-grey-secondary;
     counter-reset: $color-black-main;
+    font-weight: 500;
     @include transition;
 
     &:hover {
@@ -141,7 +148,7 @@
   }
 
   &__productions-menu {
-  position: relative;
+    position: relative;
 
     &:hover .productions-list {
       z-index: 1;
@@ -269,9 +276,10 @@
     justify-content: flex-start;
     padding-left: 20px;
     align-items: center;
+    font-weight: 400;
 
     &:hover {
-      font-weight: 600;
+      font-weight: 700;
     }
 
     &:not(:last-child) {

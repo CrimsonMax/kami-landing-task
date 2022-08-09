@@ -261,7 +261,8 @@ function autoPlay(direction) {
 
 // MODAL // ================================================================================
 
-const modalBtn = document.querySelector('.nav__btn-call')
+const modalBtnDesk = document.querySelector('.nav-btn-call')
+const modalBtnMobile = document.querySelector('.burger-btn-call')
 const modalBg = document.querySelector('.modal-bg')
 const modalClose = document.querySelector('.modal__close-icon')
 const body = document.querySelector('body')
@@ -281,14 +282,27 @@ const modalOff = () => {
   overflowOn()
 }
 
-modalBtn.addEventListener('click', modalOn)
+modalBtnDesk.addEventListener('click', modalOn)
+modalBtnMobile.addEventListener('click', modalOn)
 modalClose.addEventListener('click', modalOff)
 
 // DROPDOWN // ================================================================================
 
-// const listDropBtn = document.querySelector('.nav__btn-production')
-// const listBlock = document.querySelector('.productions-list')
+const listDropBtn = document.querySelector('.burger-menu__btn-productions')
+const listBlock = document.querySelector('.burger-menu__production-list')
 
-// listDropBtn.addEventListener('click', () => listBlock.classList.add('active'))
-// listDropBtn.addEventListener('mouseout', () => listBlock.classList.remove('active'))
+const burgerDrop = () => {
+  listDropBtn.classList.toggle('active')
+  listBlock.classList.toggle('production-active')
+}
+
+listDropBtn.addEventListener('click', burgerDrop)
+// listDropBtn.addEventListener('mouseout', () => listBlock.classList.remove('production-active'))
 // listBlock.addEventListener('mouseleave', () => listBlock.classList.remove('active'))
+
+// BURGER // ================================================================================
+
+const burgerBtn = document.querySelector('.burger-btn')
+const burgerMenu = document.querySelector('.burger-menu')
+
+burgerBtn.addEventListener('click', () => burgerMenu.classList.toggle('burger-active'))

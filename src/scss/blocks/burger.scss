@@ -1,17 +1,103 @@
 .burger-menu {
+  position: absolute;
+  background: $color-white;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  font-size: 18px;
+  color: $color-black-main;
+  top: -100%;
+  @include transition;
+
+  &.burger-active {
+    top: 110px;
+
+    @include tablet-width {
+      top: 94px;
+    }
+
+    @include mob-width {
+      top: 74px;
+    }
+  }
 
   &__container {
+    padding: 0 15px;
   }
 
   &__item {
+    height: 50px;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    padding-left: 20px;
+    align-items: center;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-grey-forth;
+    }
+
+    &:last-child {
+      padding: 0;
+      height: 100px;
+    }
   }
 
   &__btn-productions {
   }
 
+  &__production-list {
+    font-size: 16px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border-bottom: 1px solid $color-grey-forth;
+    gap: 14px;
+    padding: 20px;
+    @include transition;
+
+    &.production-active {
+      display: flex;
+    }
+  }
+
+  &__projects {
+    font-weight: 500;
+  }
+
   &__link {
   }
 
+  &__btn-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__btn-call {
+    height: 50px;
+    width: 209px;
+    background-color: $color-yellow-main;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: $color-black-main;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    @include transition;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $color-yellow-hover;
+      }
+    }
+
+    &:active {
+      background-color: $color-yellow-action;
+    }
   }
 }
