@@ -6,6 +6,8 @@
   height: 110px;
   width: 100%;
   background-color: $color-white;
+  z-index: 3;
+  position: relative;
 
   &__container {
     height: 100%;
@@ -24,6 +26,10 @@
   }
 
   &__mobile-menu {
+  }
+
+  @include big-tablet-width {
+    position: fixed;
   }
 
   @include tablet-width {
@@ -195,6 +201,16 @@
 
   &__mobile-icon {
     height: 59px;
+
+    @media (hover: hover) {
+      &:hover {
+        filter: brightness(1.1);
+      }
+    }
+
+    &:active {
+      filter: brightness(0.95);
+    }
 
     @include tablet-width {
       height: 49px;

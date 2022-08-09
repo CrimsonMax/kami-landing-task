@@ -39,6 +39,20 @@ li {
   @include margin-auto;
 }
 
+.main {
+  @include big-tablet-width {
+    padding-top: 110px;
+  }
+
+  @include tablet-width {
+    padding-top: 94px;
+  }
+
+  @include mob-width {
+    padding-top: 74px;
+  }
+}
+
 .section {
   margin-bottom: 106px;
 }
@@ -48,3 +62,4 @@ li {
 @import "./layout/header.scss";
 @import "./blocks/production.scss";
 @import "./blocks/slider.scss";
+@import "./blocks/modal.scss";

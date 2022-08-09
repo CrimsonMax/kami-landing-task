@@ -1,4 +1,4 @@
-// Slider //
+// SLIDER // ================================================================================
 
 // Setup prime elements
 const mainContainer = document.querySelector('.max-slider')
@@ -258,3 +258,28 @@ function dragEnd() {
 function autoPlay(direction) {
   setInterval(direction, timer)
 }
+
+// MODAL // ================================================================================
+
+const modalBtn = document.querySelector('.nav__btn')
+const modalBg = document.querySelector('.modal-bg')
+const modalClose = document.querySelector('.modal__close-icon')
+const body = document.querySelector('body')
+
+const addClass = () => modalBg.classList.add('bg-active')
+const overflowOff = () => body.classList.add('modal-on')
+const removeClass = () => modalBg.classList.remove('bg-active')
+const overflowOn = () => body.classList.remove('modal-on')
+
+const modalOn = () => {
+  addClass()
+  overflowOff()
+}
+
+const modalOff = () => {
+  removeClass()
+  overflowOn()
+}
+
+modalBtn.addEventListener('click', modalOn)
+modalClose.addEventListener('click', modalOff)

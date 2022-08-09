@@ -81,7 +81,46 @@
     </div>
   </div>
 </header>
-  <main>
+  <main class="main">
+    <div class="modal-bg">
+
+  <div class="wrapper">
+    <div class="modal">
+      <div class="modal__close">
+        <img class="modal__close-icon" src="../../img/svg/close_cross.svg" alt="Close">
+      </div>
+
+      <div class="modal__container">
+        <div class="modal__header">
+          <h2 class="modal__header-text">Заказать звонок</h2>
+        </div>
+
+        <form class="modal__form">
+          <div class="modal__form-row">
+            <input class="modal__form-input" type="text" placeholder="Ваше имя*" class="modal__input" required>
+          </div>
+          <div class="modal__form-row">
+            <input class="modal__form-input" type="tel" placeholder="Телефон*" class="modal__input"
+              pattern="^([0|\+[0-9]{1,5})?([0-9]{10})$" required>
+          </div>
+          <div class="modal__form-row">
+            <textarea class="modal__form-textarea" placeholder="Введите сообщение..."></textarea>
+          </div>
+          <div class="modal__form-row">
+            <div class="modal__form-agreement">
+              <input class="modal__form-agreement-checkbox" type="checkbox" id="agreement" name="agreement">
+              <label for="agreement"><span class="modal__form-agreement-text">Согласен на обработку</span> персональных данных</label>
+            </div>
+          </div>
+          <button type="submit" class="modal__form-btn">Отправить</button>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
     <section class="section slider">
   <div class="slider__container">
 
