@@ -261,7 +261,7 @@ function autoPlay(direction) {
 
 // MODAL // ================================================================================
 
-const modalBtn = document.querySelector('.nav__btn')
+const modalBtn = document.querySelector('.nav__btn-call')
 const modalBg = document.querySelector('.modal-bg')
 const modalClose = document.querySelector('.modal__close-icon')
 const body = document.querySelector('body')
@@ -283,3 +283,12 @@ const modalOff = () => {
 
 modalBtn.addEventListener('click', modalOn)
 modalClose.addEventListener('click', modalOff)
+
+// DROPDOWN // ================================================================================
+
+// const listDropBtn = document.querySelector('.nav__btn-production')
+// const listBlock = document.querySelector('.productions-list')
+
+// listDropBtn.addEventListener('click', () => listBlock.classList.add('active'))
+// listDropBtn.addEventListener('mouseout', () => listBlock.classList.remove('active'))
+// listBlock.addEventListener('mouseleave', () => listBlock.classList.remove('active'))

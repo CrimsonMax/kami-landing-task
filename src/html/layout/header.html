@@ -30,11 +30,12 @@
           </ul>
 
           <div class="nav__details">
-            <select name="" id="" class="nav__production">
-              <option value="Продукция">Продукция</option>
-            </select>
+            <div class="nav__productions-menu">
+              <button class="nav__btn-production">Продукция</button>
+              @@include('../blocks/dropdown.html', {})
+            </div>
             <a href="#" class="nav__projects">Реализованные проекты</a>
-            <button class="nav__btn">Заказать звонок</button>
+            <button class="nav__btn-call">Заказать звонок</button>
           </div>
 
         </nav>

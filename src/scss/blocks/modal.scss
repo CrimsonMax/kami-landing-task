@@ -26,8 +26,6 @@
 
 .modal {
   max-width: 593px;
-  // margin-top: 50px;
-  // margin-bottom: 50px;
   border-radius: 14px;
   position: relative;
   background-color: $color-white;
@@ -164,6 +162,20 @@
       border-radius: 0px;
       border-bottom-left-radius: 14px;
       border-bottom-right-radius: 14px;
+    }
+  }
+
+  &__form-span1 {
+    @include mob-width {
+      display: none;
+    }
+  }
+
+  &__form-span2 {
+    display: none;
+
+    @include mob-width {
+      display: block;
     }
   }
 
