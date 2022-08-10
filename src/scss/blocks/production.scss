@@ -135,6 +135,10 @@
     @include mob-width {
       padding-left: 14px;
     }
+    
+    @include mob-mini-width {
+      padding-left: 12px;
+    }
   }
 
   &__name {
@@ -147,7 +151,11 @@
     }
 
     @include mob-width {
-      font-size: 18px;
+      font-size: 16px;
+    }
+
+    @include mob-mini-width {
+      font-size: 14px;
     }
   }
 

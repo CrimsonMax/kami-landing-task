@@ -1137,6 +1137,7 @@ li {
 }
 
 .burger-menu {
+  display: none;
   position: absolute;
   background: #ffffff;
   height: 100%;
@@ -1369,6 +1370,10 @@ li {
   .max-slider__dots-container {
     margin-bottom: 50px;
   }
+
+  .burger-menu {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1526,7 +1531,7 @@ li {
   }
 
   .production__name {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .slider__container {
@@ -1595,6 +1600,16 @@ li {
 
   .burger-menu.burger-active {
     top: 74px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .production__bgr {
+    padding-left: 12px;
+  }
+
+  .production__name {
+    font-size: 14px;
   }
 }
 

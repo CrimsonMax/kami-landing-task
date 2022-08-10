@@ -1,4 +1,5 @@
 .burger-menu {
+  display: none;
   position: absolute;
   background: $color-white;
   height: 100%;
@@ -93,5 +94,9 @@
     &:active {
       background-color: $color-yellow-action;
     }
+  }
+
+  @include big-tablet-width {
+    display: block;
   }
 }
