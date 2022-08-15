@@ -617,6 +617,11 @@ li {
   z-index: 1;
   opacity: 1;
   top: 45px;
+  visibility: visible;
+}
+
+.nav__productions-menu:hover .productions-list__container::before {
+  display: block;
 }
 
 .contacts {
@@ -700,10 +705,22 @@ li {
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   opacity: 0;
+  visibility: hidden;
 }
 
 .productions-list__container {
   padding: 10px 20px;
+  position: relative;
+}
+
+.productions-list__container::before {
+  content: "";
+  display: none;
+  width: 100%;
+  height: 25px;
+  position: absolute;
+  top: -25px;
+  left: 0;
 }
 
 .productions-list__item {
